@@ -22,6 +22,6 @@ public class MemberServiceTest {
         String email = "test@test.com";
         String nickname = "tester";
 
-        this.memberService.join(userName, password, email, nickname);
+        memberService.join(userName, password, email, nickname);
     }
 }
