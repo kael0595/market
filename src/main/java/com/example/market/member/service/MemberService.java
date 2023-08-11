@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Service
 @RequiredArgsConstructor
@@ -22,7 +22,7 @@ public class MemberService {
         member.setPassword(passwordEncoder.encode(password));
         member.setEmail(email);
         member.setNickName(nickname);
-        member.setCreateDate(LocalDate.now());
+        member.setCreateDate(LocalDateTime.now());
         this.memberRepository.save(member);
         return member;
     }

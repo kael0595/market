@@ -1,5 +1,6 @@
 package com.example.market.member.entity;
 
+import com.example.market.entity.BaseEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,11 +12,7 @@ import java.time.LocalDate;
 @Entity
 @Getter
 @Setter
-public class Member {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Member extends BaseEntity {
 
     @Column(unique = true)
     private String username;
@@ -26,11 +23,6 @@ public class Member {
 
     private String email;
 
-    @CreatedDate
-    private LocalDate createDate;
-
-    @LastModifiedDate
-    private LocalDate modifyDate;
-
+    private String isActive;
 
 }
