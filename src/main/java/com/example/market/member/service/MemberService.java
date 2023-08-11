@@ -21,7 +21,7 @@ public class MemberService {
         member.setUsername(username);
         member.setPassword(passwordEncoder.encode(password));
         member.setEmail(email);
-        member.setNickName(nickname);
+        member.setNickname(nickname);
         member.setCreateDate(LocalDateTime.now());
         this.memberRepository.save(member);
         return member;
